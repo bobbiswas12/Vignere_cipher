@@ -13,7 +13,7 @@ string encrypt(string deciphered, string key){
   string ciphered = "";
   for (int i = 0; i < k; i++){
     char current = deciphered[i];
-    char key_char = toupper(newkey[i]);  // normalize key to uppercase
+    char key_char = toupper(newkey[i]);  
     int shift = key_char - 'A';
     
     if ((int) current <= 90 and (int) current >= 65){
@@ -24,6 +24,9 @@ string encrypt(string deciphered, string key){
       char upper_current = toupper(current); 
       char new1 = (char)((upper_current - 'A' + shift) % 26 + 'A');  
       ciphered += tolower(new1);
+    }
+    else{
+      ciphered+=current;
     }
   }
   return ciphered;
@@ -73,13 +76,13 @@ int main(){
     string deciphered;
     cout<<"Enter the deciphered string"<<endl;
     cin>>deciphered;
-    cout<<encrypt(deciphered,key);
+    cout<<encrypt(deciphered,key)<<endl;
   }
   else{
     string ciphered;
     cout<<"Enter the ciphered string"<<endl;
     cin>>ciphered;
-    cout<<decrypt(ciphered,key);
+    cout<<decrypt(ciphered,key)<<endl;
   }
   return 0;
 }
