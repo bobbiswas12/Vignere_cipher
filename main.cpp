@@ -79,6 +79,7 @@ int main(){
     string ciphered;
     cout<<"Enter the ciphered string"<<endl;
     cin>>ciphered;
+    cout<<"HI"<<endl;
     cout<<decrypt(ciphered,key);
   }
   return 0;
