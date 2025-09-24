@@ -76,12 +76,14 @@ int main(){
     string deciphered;
     cout<<"Enter the deciphered string"<<endl;
     cin>>deciphered;
+    cout<<"Ciphered string"<<endl;
     cout<<encrypt(deciphered,key)<<endl;
   }
   else{
     string ciphered;
     cout<<"Enter the ciphered string"<<endl;
     cin>>ciphered;
+    cout<<"Deciphered string"<<endl;
     cout<<decrypt(ciphered,key)<<endl;
   }
   return 0;
